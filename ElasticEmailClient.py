@@ -50,7 +50,7 @@ class ApiClient:
 		if jsonMy['success'] is False:
 			return jsonMy['error']
 			
-		if 'data' in jsonMy.keys():
+		if 'data' in list(jsonMy.keys()):
 			return jsonMy['data']
 		else:
 			return 'success'
